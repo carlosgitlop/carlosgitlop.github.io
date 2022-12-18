@@ -1,0 +1,1301 @@
+@import url(./normalize.css);
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+
+/* AQUI EMPIEZO A DECLARAR LAS FUENTES ADJUNTAS POR SI GOOGLE SE CAE */
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
+  font-weight: bold
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato/Lato-Italic.ttf') format('truetype');
+  font-style: italic
+}
+
+/* AQUI TERMINO DE DECLARAR LAS FUENTES ADJUNTAS POR SI GOOGLE SE CAE */
+
+/* REGLAS GLOBALES */
+
+*,
+:after,
+:before {
+  box-sizing: inherit
+}
+
+* {
+  box-sizing: border-box
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth
+}
+
+body {
+  /* Tipografía del body de la página */
+  font-family: Lato, sans-serif;
+  /* Margen superior del body = 0 */
+  margin: 0;
+}
+
+p {
+  /* Tamaño de la tipografía */
+  font-size: 1.8rem;
+  /* Alto de línea */
+  line-height: 1.5;
+  /* Margen izquierdo */
+  margin-left: 2rem;
+  /* Margen derecho */
+  margin-right: 2rem
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  line-height: 1.38
+}
+
+h1 {
+  font-size: 4.5rem
+}
+
+h2 {
+  position: sticky;
+  top: 9rem;
+  z-index: 101;
+  font-size: 3rem;
+  color: white;
+  background-color: rgb(0 0 0 / 85%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  width: 100%;
+  margin-left: 0rem;
+  margin-right: 0rem
+}
+
+h3 {
+  font-size: 2.5rem;
+  color:black
+}
+
+a {
+  color: #2d79acf3;
+  text-decoration: none
+}
+
+img {
+  transition: all .5s ease-in-out
+}
+
+/* AQUÍ EMPIEZA LA CABECERA [versión movil] */
+
+.cabecera {
+  display:none
+}
+
+/* AQUÍ TERMINA LA CABECERA [versión movil] */
+
+/* AQUI EMPIEZA EL BLOQUE PARA 'MOSTRAR/OCULTAR EL MENU SOLO PARA DISPOSITIVOS MÓVILES */
+
+.mostrar-menu {
+  display: block;
+  font-size: 5rem;
+  text-decoration: none;
+  color: #7e7d86;
+  text-align: center;
+  font-weight: lighter;
+  /*  text-transform: uppercase; ahora no me hace falta */
+}
+
+/* Oculto el checkbox */
+
+input[type=checkbox] {
+  display: none
+}
+
+/* Muestro el menu cuando checkbox está activo */
+
+input[type=checkbox]:checked~#menu {
+  display: block;
+  margin-top: 3rem
+}
+
+/* AQUI TERMINA EL BLOQUE PARA 'MOSTRAR/OCULTAR EL MENU SOLO PARA DISPOSITIVOS MÓVILES */
+
+/* AQUÍ EMPIEZA EL FONDO DEL INDEX CON LOS DOS TEXTOS */
+
+.slider {
+  margin:0;
+  /* width: 100vw; */
+  height: 80vh;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  background-image: url(../images/slider1.jpg);
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  flex-direction:column;
+  align-items:center;
+  background-color: black
+  }
+
+.slider-texto {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-top: 4rem
+  }
+
+.slider-texto p {
+  font-size:2rem
+}
+
+.slider-texto h1 {
+  color:white
+}
+
+/* AQUÍ TERMINA EL FONDO DEL INDEX CON LOS DOS TEXTOS */
+
+header {
+  display: none
+}
+
+/* AQUÍ EMPIEZA EL MENÚ */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  /* Sombra de la cabecera
+  box-shadow: 1px 2px 9px #777777; */
+  position:sticky;
+  z-index: 100;
+  line-height: 7rem;
+  /* Posicionamiento fijo */
+  top: 0rem;
+  /* Permanezca arriba */
+  width: 100%;
+  /* Ancho 100% */
+  background-color: rgb(0 0 0 / 85%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  /* con el 85% de opacidad y blur del backdrop-filter consigo ese efecto tan chulo del menu
+  Las -webkit son para compatibilidades con smartphones y algunos navegadores (macos) */
+  }
+
+ul {
+  display: none;
+  padding-inline-start: 0px;
+}
+
+  /* Listas del menu sin decoración */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Hago que todos los enlaces del menu tengan el 100% de ancho */
+
+ul li,
+li a {
+  width: 100%;
+  text-align: center;
+}
+
+li {
+  margin-bottom: 0.1rem;
+}
+
+.nav li a {
+  color: #7e7d86;
+  text-decoration: none;
+  padding: 1rem;
+  margin: 0rem;
+  display: block;
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+/* Hago que cada sección del menú se "ilumine" al posicionar el cursor */
+
+.menu a:hover {
+  color:#d1cfdc;
+}
+
+.nav li ul {
+  display: none;
+  /* Con display "none" hago que no se quede mostrado abierto permanentemente el submenú */
+  position: relative;
+  min-width: 140px;
+}
+
+.nav li:hover>ul {
+  display: block;
+}
+
+.nav li:hover>ul li {
+  display: block;
+}
+
+.nav li ul li {
+  position: relative;
+  display: inline-block;
+}
+
+.nav li ul li ul {
+  top: 0px;
+}
+
+.linea_submenu {
+  display:block
+}
+
+.interlineado_submenu {
+  line-height: 3rem;
+}
+
+/* AQUÍ TERMINA EL MENU */
+
+/* INICIO INPUT PARA LA BÚSQUEDA */
+
+.contenedor-busqueda {
+  display: flex;
+  justify-content: center
+}
+
+.caja-busqueda {
+  width: 20rem;
+  vertical-align: middle;
+  position: relative;
+  margin-top: 1.3rem;
+  margin-right:2rem
+}
+ 
+.caja-busqueda input#search{
+  width: 20rem;
+  height: 4rem;
+  background: #444444;
+  border: none;
+  font-size: 1.6rem;
+  color: #262626;
+  padding-left: 2rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: rgb(196, 196, 196);
+}
+
+.caja-busqueda input#search::-webkit-input-placeholder {
+  color: rgb(196, 196, 196);
+  text-align: center
+}
+
+.caja-busqueda input#search:-ms-input-placeholder {  
+  color: rgb(196, 196, 196);
+  text-align: center
+}
+
+.caja-busqueda input#search:focus, .caja-busqueda input#search:active{
+  outline:none
+}
+
+/* FIN INPUT PARA LA BÚSQUEDA */
+
+/* INICIO ESTILO DE LOS h2 y h3 DEL .contenedor_index de la section sidebar (o sea de la columna del temario) */
+
+.texto_h2 {
+  text-align: center;
+  font-weight: lighter
+}
+
+.texto_h3 {
+  text-align: center;
+  font-weight: lighter;
+  border: 0.1rem solid black
+}
+
+/* FIN ESTILO DE LOS h2 y h3 DEL .contenedor_index de la section sidebar (o sea de la columna del temario) */
+
+/* INICIO CONTENEDOR FLEX PANTALLA DE INICIO */
+
+.contenedor_index {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  column-gap: 2rem;
+  margin: 0 auto
+}
+
+.contenedor_pagina_cursos {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  column-gap: 2rem;
+  margin: 0 auto;
+}
+
+.contenedor_100_por_ciento {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding-left: 2rem
+}
+
+/* FIN CONTENEDOR FLEX PANTALLA DE INICIO */
+
+.imagenes_contenedor_section, .imagenes_contenedor_section_grande {
+  max-width: 100%;
+  margin: 0;
+  padding-left: 2rem;
+  padding-right: 2rem
+}
+
+.contenedor_section_20_por_ciento {
+  display: flex;
+  width: 50%; /* Dos imágenes en el ancho ver. movil */
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-right: 2rem
+}
+
+.imagenes_contenedor_section_20_por_ciento {
+  max-width: 100%;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.imagenes_contenedor_main_cursos {
+  max-width: 100%;
+  margin: 0;
+}
+
+/* INICIO CONTENEDOR FLEX PANTALLA DE CONTACTO */
+
+.flex-container-cabecera {
+  display: flex;
+  /* Activamos flex en la clase */
+  flex-direction: column;
+  /* Ponemos los elementos en fila */
+  justify-content: center;
+  /* Justificamos el contenido */
+  /* Alineamos los elementos al centro */
+  /* border: 10px solid rgba(0, 0, 0, 0.12); */
+  margin-top: 4rem;
+  align-items: center
+}
+
+.flex-container-cabecera div {
+  margin: 2rem
+}
+
+article div img {
+  width: 70vw;
+  border-radius: 30rem;
+  background-color: #e5e2e9
+}
+
+.flex-item-2, .flex-item-3, .flex-item-aplicaciones, .flex-item-desarrollador, .flex-item-experiencia, .flex-item-formacion, .flex-item-lenguajes, .flex-item-proyectos, .flex-item-referencia {
+  box-shadow: 0 2px 4px 0 rgb(14 30 37 / 12%);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.flex-item-2:hover, .flex-item-3:hover, .flex-item-aplicaciones:hover, .flex-item-desarrollador:hover, .flex-item-experiencia:hover, .flex-item-formacion:hover, .flex-item-lenguajes:hover, .flex-item-proyectos:hover, .flex-item-referencia:hover {
+transition: all .4s ease-in-out;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3)
+}
+
+
+.flex-item-1 {
+  background-color: white
+  /* border: 1rem solid rgb(220, 220, 220); */
+}
+
+.flex-item-2 {
+  /* background-color: white; */
+  border-radius: 1rem;
+  border: 0.2rem solid rgb(220, 220, 220)
+}
+
+.flex-item-2 h3 {
+  text-align: right
+}
+
+.flex-item-3 {
+  /* background-color: white; */
+  border-radius: 1rem;
+  border: 0.2rem solid rgb(220, 220, 220);
+  /* color: rgb(91, 73, 0); */
+
+}
+
+.flex-item-formacion {
+  /* background-color:rgb(241, 253, 250); */
+  border: 0.2rem solid rgb(220, 220, 220);
+  border-radius: 1rem;
+}
+
+.flex-item-aplicaciones {
+  /* background-color:rgb(253, 241, 243); */
+  border: 0.2rem solid rgb(220, 220, 220);
+  border-radius: 1rem;
+}
+
+.flex-item-lenguajes {
+  /* background-color:rgb(253, 249, 241); */
+  border: 0.2rem solid rgb(220, 220, 220);
+  border-radius: 1rem;
+}
+
+.flex-item-experiencia {
+  /* background-color:rgb(246, 241, 253); */
+  border: 0.2rem solid rgb(220, 220, 220);
+  border-radius: 1rem;
+}
+
+.flex-item-proyectos {
+  /* background-color:rgb(253, 241, 250); */
+  border: 0.2rem solid rgb(220, 220, 220);
+  border-radius: 1rem;
+}
+
+.flex-item-desarrollador {
+  /* background-color:rgb(241, 243, 253); */
+  border: 0.2rem solid rgb(220, 220, 220);
+  border-radius: 1rem;
+}
+
+.flex-item-referencia {
+  /* background-color:rgb(233, 233, 233); */
+  border: 0.2rem solid rgb(220, 220, 220);
+  border-radius: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  /* Activamos flex en la clase */
+  flex-wrap: nowrap;
+  /* Salte el item cuando no cabe en la ventana */
+  flex-direction: column;
+  /* Ponemos los elementos en fila */
+  justify-content: space-around;
+  /* Justificamos el contenido */
+  align-items: center
+    /* Alineamos los elementos al centro */
+}
+
+.flex-container div {
+  margin: 2rem
+}
+
+/* FIN CONTENEDOR FLEX PANTALLA DE CONTACTO */
+
+/* INICIO ICONOS */
+
+.iconos-curriculum {
+  display: flex;
+  flex-direction: column;
+  column-gap: 1.8em;
+  margin: 2rem
+}
+
+.icono {
+  text-align: center
+}
+
+.icono img {
+  height: 10rem;
+  /* He usado un generador de filtros para el color de los iconos svg transformados desde la web codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(100%) sepia(6%) saturate(6217%) hue-rotate(184deg) brightness(99%) contrast(83%)
+}
+
+.icono p {
+  font-size: 1.8rem;
+  color:black
+}
+
+.icono h3 {
+  text-transform: uppercase;
+  color:black;
+  margin-left: 0;
+  margin-right: 0
+}
+
+.icono p cite {
+  font-size: 1.2rem
+}
+
+/* FIN ICONOS */
+
+/* INICIO ASIDE */
+
+.contenedor_aside {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ededed;
+  align-items: center;
+}
+
+.opiniones, .opiniones_mia {
+  width: 92%;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem;
+  margin-top: 0rem;
+  background: #fff;
+  color: rgba(23,22,58,0.83);
+  text-align: left;
+  box-shadow: 0 2px 4px 0 rgb(14 30 37 / 12%);
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.opiniones_mia {
+  background: #fad000;
+}
+
+.opiniones blockquote, .opiniones_mia blockquote {
+  line-height: 4rem;
+  position: relative;
+  font-size: 2rem;
+}
+
+.opiniones_cita {
+  display: block;
+  text-align: right;
+  font-size: 1.8rem
+}
+
+.opiniones_mia img {
+  width: 15%;
+  border-radius: 15rem;
+  background-color:  #ededed;
+  margin-left: 1rem;
+  float: right
+}
+
+/* FIN ASIDE */
+
+/* INICIO SECCION CURSOS (columna derecha del index) */
+
+.boton-cursos,
+.boton-cursos2,
+.boton-cursos3,
+.boton-cursos4,
+.boton-cursos5,
+.boton-cursos6,
+.boton-cursos7,
+.boton-cursos8,
+.boton-cursos9,
+.boton-cursos10,
+.boton-cursos11 {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  display: block;
+  border: none;
+}
+
+.boton-cursos {
+  background-color:cornflowerblue;
+}
+
+.boton-cursos2 {
+  background-color:rgb(47, 103, 57);
+}
+
+.boton-cursos3 {
+  background-color:rgb(165, 105, 53);
+}
+
+.boton-cursos4 {
+  background-color:rgb(98, 108, 109);
+}
+
+.boton-cursos5 {
+  background-color:rgb(144, 135, 37);
+}
+
+.boton-cursos6 {
+  background-color:rgb(45, 45, 45);
+}
+
+.boton-cursos7 {
+  background-color:rgb(200, 103, 0);
+}
+
+.boton-cursos8 {
+  background-color:rgb(28, 28, 185);
+}
+
+.boton-cursos9 {
+  background-color:rgb(0, 84, 8);
+}
+
+.boton-cursos10 {
+  background-color:rgb(75, 11, 15);
+}
+
+.boton-cursos11 {
+  background-color:rgb(37, 0, 100);
+}
+
+/* FIN SECCION CURSOS (columna derecha del index) */
+
+/* INICIO DEL FORMULARIO */
+
+form {
+  width: 100%;
+  margin: 0;
+  border-radius: 1rem
+}
+
+label {
+  margin: 1rem;
+  font-weight: bold
+}
+
+fieldset {
+  border-width: 0.2rem;
+  margin: 2rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  padding: 0.8em;
+  box-shadow: 0 2px 4px 0 rgb(14 30 37 / 12%);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+input,
+textarea,
+select,
+option {
+  border: 0.1rem #aaa solid;
+  border-radius: 0.3rem;
+  color: #666;
+  height: 3rem;
+  padding-left: 1rem;
+  margin-top: 1rem
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background: #f7fbf9;
+  border: 0.1rem solid black;
+  color: black;
+  font-size: 1.6rem
+}
+
+:required {
+  border: 0.15rem solid #49a9a9
+}
+
+input[type='submit'] {
+  background: #49a9a9;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+input[type='submit']:hover {
+  background: rgb(0, 0, 0)
+}
+
+input[type='reset'] {
+  background: white;
+  color: grey;
+  border: 0.1rem solid #e6e9e9;
+  padding: 0.5rem 1rem;
+  font-weight: bold
+}
+
+input[type='reset']:hover {
+  background: #ddd;
+  color: black
+}
+
+label[for='telefono'] {
+  display: block
+}
+
+td:nth-child(1) {
+  text-align: right;
+  vertical-align: top
+}
+
+table {
+  border-spacing: 0.8rem
+}
+
+table {
+  width: 50rem;
+  margin: auto
+}
+
+.grande {
+  width: 100%;
+  height: 20%;
+  margin-top: 1rem;
+  padding-left: 1rem
+}
+
+.mediogrande {
+  width: 70%;
+  padding-left: 1rem
+}
+
+.mediana {
+  width: 100%;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem
+}
+
+.pequenia {
+  width: 7.5rem;
+  padding-left: 1rem
+}
+
+textarea {
+  resize: none
+}
+
+.margen-submit {
+  margin-top: 0rem;
+}
+
+#datos_personales {
+  margin-bottom: 1rem
+}
+
+/* FIN DEL FORMULARIO */
+
+/* AQUÍ EMPIEZA EL ESTILO A LA PÁGINA 404 */
+
+.h1-404 {
+  font-size: 8rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem
+}
+
+.pagina-404 {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top:6rem;
+  text-align: center
+}
+
+.contenido-404 {
+  font-size: 1.2rem;
+  background: #fff;
+  color: #000;
+  overflow-wrap: break-word;
+  border-radius: 8px;
+  /* padding: 4rem; */
+  position: relative
+  }
+  
+.ul-404 {
+  display:block;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-top: 4rem;
+  margin-bottom: 4rem
+}
+
+.ul-404 ul li, li a {
+  width: 100%
+}
+      
+.img-404 {
+  width: 100%;
+  margin:0;
+  padding:0
+}
+
+.boton-inicio-404 {
+  font-size: large;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  border: none;
+  border-radius: 1rem;
+  background-color:cornflowerblue
+}
+
+#parrafo-404 {
+  margin-bottom: 4rem
+}
+
+#menu-404 a {
+  margin-right: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 2.5
+}
+
+/* AQUÍ TERMINA EL ESTILO A LA PÁGINA 404 */
+
+/* INICIO DEL FOOTER */
+
+footer {
+  /* Color de fondo del footer */
+  background-color: rgb(0 0 0 / 85%);
+  /* Espacio de relleno superior 50px */
+  padding-top: 5rem;
+  /* Espacio de relleno inferior 50px */
+  padding-bottom: 5rem;
+  /* Color del texto blanco */
+  color: white;
+  /* Tamaño de la fuente 16px */
+  font-size: 1.6rem;
+  line-height: 1.5;
+  padding-left: 2rem;
+  margin-top: 2rem;
+  padding-right: 2rem;
+  text-align: center
+}
+
+footer a {
+  text-decoration: none;
+  color: white
+}
+
+footer p {
+  font-size: 1.6rem;
+}
+
+footer div p {
+  line-height: 1.4
+}
+
+footer div img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  width: 65%
+}
+
+/* FIN DEL FOOTER */
+
+/* INICIO SUBIR PAGINA */
+
+.subir a img{
+  display: none
+}
+
+/* FIN SUBIR PAGINA */
+
+/* INICIO IFRAME YOUTUBE */
+
+.contenedor-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin-right:2rem;
+  margin-left:2rem;
+  overflow: hidden;
+}
+.contenedor-video iframe,
+.contenedor-video object,
+.contenedor-video embed {
+  border:0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+
+/* FIN IFRAME YOUTUBE */
+
+/* INICIO RESPONSIVE PARA RESOLUCIONES ENTRE 768PX Y 1920PX  */
+
+@media screen and (min-width : 768px) and (max-width:1920px) {
+
+  .texto_h2 {
+    position: relative;
+    top: auto;
+    z-index: auto;
+    color:white;
+    background-color: black;
+    width:100%;
+  }
+
+  .cabecera {
+    display:block;
+    width: 100vw;
+    margin:0;
+    /* background-color: rgb(68, 68, 68) */
+  }
+
+  .navbar {
+    padding-top: 6rem;
+    line-height: 6rem;
+    position: fixed;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    /* Sombra de la cabecera
+    box-shadow: 1px 2px 9px #777777; */
+    position: fixed;
+    z-index: 200;
+    /* Posicionamiento fijo */
+    top: 0;
+    /* Permanezca arriba */
+    width: 100%;
+    /* Ancho 100% */
+    /* background-color: black; */
+    }
+
+  .mostrar-menu {
+    display: none
+  }
+
+  ul {
+    display: flex
+  }
+
+  .nav li a {
+    transition-duration: .5s;
+  }
+
+  .nav li a:hover {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+    transition: all .3s ease-in-out;
+  }
+
+  .nav li ul li ul {
+    left: 20%
+  }
+
+  .caja-busqueda input#search::-webkit-input-placeholder {
+    text-align: left
+  }
+  
+  .caja-busqueda input#search:-ms-input-placeholder {  
+    text-align: left
+  }
+
+  .slider {
+    background-image: url(../images/slider1-screen.jpg);
+    width: 100%;
+    height: 107vh;
+    background-size: cover;
+    background-position: center
+  }
+
+  .slider-texto{
+    width: 70%;
+    margin-top: 19rem;
+  }
+
+  .contenedor_index {
+    flex-direction: row;
+    align-items: baseline
+  }
+
+  .contenedor_pagina_cursos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between
+  }
+
+  .imagenes_contenedor_section_grande {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem
+  }
+
+  .imagenes_contenedor_section {
+    width: 58%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    float: left
+  }
+
+  .imagenes_contenedor_section_20_por_ciento {
+    width: 100%;
+  }
+
+  .imagenes_contenedor_section_20_por_ciento:hover {
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .contenedor_section {
+    width: 50%
+  }
+
+  .contenedor_section_cursos {
+    width: 75%
+  }
+    
+  .contenedor_aside {
+    width: 30%
+  }
+
+  .contenedor_sidebar {
+    width: 20%
+  }
+
+  .opiniones, .opiniones_mia {
+    width: 80%
+  }
+
+  .opiniones_mia img {
+    width: 30%;
+    border-radius: 15rem;
+    margin-left: 1rem;
+    float: right
+  }
+
+  .opiniones:hover, .opiniones_mia:hover {
+    transition: all .4s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3)
+  }
+
+  .boton-cursos,
+  .boton-cursos2,
+  .boton-cursos3,
+  .boton-cursos4,
+  .boton-cursos5,
+  .boton-cursos6,
+  .boton-cursos7,
+  .boton-cursos8,
+  .boton-cursos9,
+  .boton-cursos10,
+  .boton-cursos11 {
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .boton-cursos:hover,
+  .boton-cursos2:hover,
+  .boton-cursos3:hover,
+  .boton-cursos4:hover,
+  .boton-cursos5:hover,
+  .boton-cursos6:hover,
+  .boton-cursos7:hover,
+  .boton-cursos8:hover,
+  .boton-cursos9:hover,
+  .boton-cursos10:hover,
+  .boton-cursos11:hover {
+  -webkit-transform:scale(1.1);
+  transform:scale(1.1);
+  transition: all .1s ease-in-out
+  }
+
+  .contenedor_100_por_ciento {
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .contenedor_section_20_por_ciento {
+    display:flex;
+    width:12%;
+    margin:0;
+  }
+
+  .flex-container-cabecera {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20rem;
+    align-items: flex-start
+  }
+
+  .flex-container-cabecera div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 48rem;
+    min-width: 24rem;
+    width: 100vw
+  }
+
+  article div img {
+    width: 44rem;
+    margin-left: 2rem
+  }
+
+  .flex-container {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch
+  }
+
+  .flex-container div {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-width: 24rem;
+    display: flex;
+    align-content: space-between;
+    align-items: baseline;
+  }
+
+  .iconos-curriculum {
+    flex-direction: row
+  }
+  
+  label[for='apellidos'] {
+    display: inline-block
+  }
+
+  label[for='telefono'] {
+    display: inline-block
+  }
+
+  label[for='direccion'] {
+    display: inline-block
+  }
+
+  label[for='ciudad'] {
+    display: inline-block
+  }
+
+  label[for='ciudad'] {
+    display: inline-block
+  }
+
+  fieldset {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  #h3_formulario {
+    margin-left: 4rem
+  }
+
+  .mediana {
+    width: 34%;
+    padding-left: 1rem
+  }
+
+  input,
+  textarea,
+  select,
+  option {
+    margin-top: 0rem;
+    margin-bottom: 1rem
+  }
+
+  input[type='submit'] {
+    margin-top: 1rem
+  }
+
+  #datos_personales {
+    margin-bottom: 0rem
+  }
+
+  /* AQUÍ EMPIEZA EL ESTILO A LA PÁGINA 404 */
+
+.h1-404 {
+  margin-top: 15rem
+}
+
+  /* AQUÍ TERMINA EL ESTILO A LA PÁGINA 404 */
+
+  footer div img {
+    width: 40rem
+  }
+
+  /* INICIO SUBIR PÁGINA */
+
+.subir a img{
+  width: 4rem;
+  display: block;
+  background-color: rgb(0 0 0 / 45%);
+  margin: 0rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  transition: all 300ms ease 0ms;
+	z-index: 99;
+
+}
+
+.subir a img:hover {
+	background-color: rgb(0 0 0 / 85%); /* Color de fondo al pasar el cursor */
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px)
+}
+
+/* FIN SUBIR PÁGINA */
+
+  /* INICIO IFRAME VÍDEO YOUTUBE */
+
+.contenedor-video {
+  margin-right:0rem;
+}
+
+  /* FIN IFRAME VÍDEO YOUTUBE */
+
+}
+
+/* FIN RESPONSIVE PARA RESOLUCIONES ENTRE 768PX Y 1920PX  */
+
+/* INICIO RESPONSIVE PARA RESOLUCIONES ENTRE 768PX Y 990PX Creo otro salto para evitar overflows (es decir que no ocurra que los textos se salgan de las cajas al ir disminuyendo el tamaño de la ventana */
+
+@media screen and (min-width : 768px) and (max-width:990px) {
+
+  .contenedor_sidebar p {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    position: relative
+  }
+
+  .opiniones blockquote, .opiniones_mia blockquote {
+    line-height: 3rem;
+    font-size: 1.8rem
+}
+
+article div img {
+  position: relative;
+}
+
+}
+
+/* FIN RESPONSIVE PARA RESOLUCIONES ENTRE 768PX Y 990PX */

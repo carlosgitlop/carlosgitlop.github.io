@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Cursos Web Online</title>
+    <meta name="description"
+        content="Cursos online para aprender de forma rápida y sencilla el lenguaje de marcado HTML, a dar estilo con CSS, a crear animaciones en Javascript, a programar en PHP y a gestionar bases de datos con SQL">
+    <meta name="keywords" content="cursos, programación, html, css, javascript, php, mysql">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="#"><img src="./images/cabecera.png" alt="cabecera del web site" class="cabecera"></a>
+        </div>
+    </header>
+            <nav class="navbar">
+                <label for="mostrar-menu" class="mostrar-menu">&equiv;</label>
+                <input type="checkbox" id="mostrar-menu" role="button" aria-pressed="true"> <!-- El aria-pressed establece o recupera el estado “presionado” de un botón -->
+                <ul class="nav" id="menu">
+                    <li class="menu"><a href="#">Inicio</a>
+                    <li class="menu"><a href="#">Cursos</a>
+                        <ul>
+                            <li class="menu"><a href="#">Front-end</a>
+                                <ul class="interlineado_submenu">
+                                    <li><hr class="linea_submenu"></li>
+                                    <li><a href="./cursos/curso_html/curso_html.html">HTML<sub>5</sub></a></li>
+                                    <li><a href="./cursos/curso_css/curso_css.html">CSS<sub>3</sub></a></li>
+                                    <li><a href="./cursos/curso_javascript/curso_javascript.html">JavaScript</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu"><a href="#">Back-end</a>
+                                <ul class="interlineado_submenu">
+                                    <li><hr class="linea_submenu"></li>
+                                    <li><a href="#">PHP</a></li>
+                                    <li><a href="#">MySQL</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu"><a href="#">Otros</a>
+                                <ul class="interlineado_submenu">
+                                    <li><hr class="linea_submenu"></li>
+                                    <li><a href="#">Visual Studio Code</a></li>
+                                    <li><a href="#">Photoshop</a></li>
+                                    <li><a href="#">Indesign</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    <li class="menu"><a href="./error_404/404.html">Noticias</a></li>
+                    <li class="menu"><a href="./contacto/contacto.html">Contacto</a></li>
+                    <li>
+                        <div class="contenedor-busqueda">
+                            <div class="caja-busqueda">
+                                <input type="search" id="search" placeholder="Buscar">
+                            </div>
+                          </div>
+                    </li>
+                </ul>
+            </nav>
+
+    <main>
+    <div class="slider">
+        <div class="slider-texto">
+          <h1>&lt;Diseña tu web&gt;</h1>
+          <p>¿Cómo se hace una página web? Aquí podrás aprender de forma fácil y rápida a diseñar una página web utilizando el lenguaje de marcado HTML<sub>5</sub>, a darle estilo con CSS<sub>3</sub> e incluso a crear tu primer programa con JavaScript.</p>
+        </div>
+    </div>
+    </main>
+
+    <div class="contenedor_index">
+        <section class="contenedor_section">
+            <h2 class="texto_h2">&num;Introducción a los cursos</h2>
+                <div>
+                    <img class="imagenes_contenedor_section_grande" src="./images/yo_codificando.png" alt="imagen codificando">
+                </div>
+                <p>
+                    Si estás buscando un curso para aprender a diseñar páginas web estás en el lugar adecuado. Antes de que empieces con el proceso de aprendizaje debes saber que tanto tu edad como tu nivel de conocimientos no importan. Todo el mundo puede aprender a diseñar una página web desde cero independientemente de su edad y de sus conocimientos. Acepta el desafío de aprender algo nuevo y deja que tu mente y tu mundo se expandan.
+                </p>
+                <p>
+                    Este <em>web site</em> está diseñado de la forma más limpia (en cuanto colores) y clara (en cuanto a fuentes tipográficas) para evitar distracciones y centrarse en lo que realmente nos compete; el código y tu aprendizaje.
+                </p>
+                <p>
+                    Aprender esta nueva disciplina requerirá de mucha práctica. En este curso vamos a hacerlo de una forma pausada y guiada. Comenzaremos con lo más básico y los ejercicios se volverán cada vez más intensos y complejos a medida que avancen las lecciones.
+                </p>
+                <div>
+                    <img  class="imagenes_contenedor_section" src="./images/ninja_css.jpg" alt="imagen codificando">
+                </div>
+                <p>
+                    Entenderás como funciona internet y las páginas web, conocerás como se construyen con HTML<sub>5</sub> y aprenderás todas las etiquetas y sus propiedades para poder crear su estructura. Te enseñaremos como 'ponerla guapa' aplicándole el estilo que deseas con CSS<sub>3</sub> y hacerla interactiva con JavaScript para que así luzca increíble.
+                </p>
+                <p>
+                    El objetivo principal de este curso es que aprendas a utilizar HTML<sub>5</sub> y CSS<sub>3</sub> para crear una página web ya sea un blog personal, una tienda o cualquier otro negocio que te propongas.
+                </p>
+                <p>
+                    Por último también aprenderás algunas nociones básicas de diseño gráfico para poder utilizar aplicaciones como Photoshop o Indesign con lo que podrías llegar finalmente a convertirte en un diseñador super completo porque además de saber HTML<sub>5</sub> y CSS<sub>3</sub> podrías llegar a diseñar tu mismo muchos elementos decorativos como los <em>banners</em>, fondos, o ilustraciones de tu <em>site</em>.
+                </p>
+                <p>
+                    Para poder iniciarte en este proceso de aprendizaje necesitarás, obviamente, un ordenador y poco más (además de tu interés y tu paciencia). Digo que poco más ya que, con un simple editor de texto y un navegador podremos escribir el código y lanzarlo para ver su resultado. Nosotros te vamos a recomendar algunas aplicaciones para que la tarea de escribir código sea menos tediosa y mucho más sencilla de llevar a cabo.
+                </p>
+                <div class="contenedor-video">
+                     <iframe src="https://player.vimeo.com/video/61830142?h=e0ff7fbadc" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>
+                    Lo primero de todo es que instales en tu ordenador el <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a> que es una aplicación gratuita muy intuitiva y facil de utilizar con la que te va a resultar muy sencillo aprender a escribir en cualquier lenguaje, tanto de marcas, como de programación, y que incluye soporte para la depuración, control integrado de Git (que ya veremos más adelante), resaltado de sintaxis, finalización inteligente de código, fragmentos y refactorización de código.
+                </p>
+                <p>
+                    Como navegador de internet elegiremos el <a href="https://www.google.com/intl/es_es/chrome/" target="_blank">Google Chrome</a> o el <a href="https://www.mozilla.org/es-ES/firefox/new/" target="_blank">Firefox</a> de Mozilla (el que más te guste). Ya que consideramos que son los dos mejores porque ofrecen la posibilidad de <em>inspeccionar</em> elemento a elemento del código y hacer cambios <em>on the fly</em> de mejor manera que el resto. Si puedes evitar el Internet Explorer mejor que mejor.
+                </p>
+                <p>
+                    En el mercado existen multitud de sistemas de gestión de contenidos como <a href="https://es.wordpress.org/" target="_blank">Wordpress</a>, <a href="https://www.joomla.org" target="_blank">Joomla</a>, <a href="https://www.drupal.org" target="_blank">Drupal</a>, etc que te facilitan la incorporación temas, plantillas, widgets, plugins, etc para la realización de una página web pero como vamos a enseñarte a crear una web desde cero vamos a obviarlos totalmente. 
+                </p>
+                <img  class="imagenes_contenedor_section" src="./images/visual-studio-code.jpg" alt="imagen de la aplicación Visual Studio Code">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni maxime ratione voluptatum totam ipsum, fugit sint suscipit sapiente officia vel neque praesentium corrupti veniam, commodi corporis eius dignissimos quos delectus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis atque unde veritatis nisi magni soluta officiis accusantium inventore. Vero fugit corporis molestiae? Dolor eum in esse placeat eius incidunt explicabo.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni maxime ratione voluptatum totam ipsum, fugit sint suscipit sapiente officia vel neque praesentium corrupti veniam, commodi corporis eius dignissimos quos delectus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis atque unde veritatis nisi magni soluta officiis accusantium inventore. Vero fugit corporis molestiae? Dolor eum in esse placeat eius incidunt explicabo.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni maxime ratione voluptatum totam ipsum, fugit sint suscipit sapiente officia vel neque praesentium corrupti veniam, commodi corporis eius dignissimos quos delectus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis atque unde veritatis nisi magni soluta officiis accusantium inventore. Vero fugit corporis molestiae? Dolor eum in esse placeat eius incidunt explicabo.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni maxime ratione voluptatum totam ipsum, fugit sint suscipit sapiente officia vel neque praesentium corrupti veniam, commodi corporis eius dignissimos quos delectus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis atque unde veritatis nisi magni soluta officiis accusantium inventore. Vero fugit corporis molestiae? Dolor eum in esse placeat eius incidunt explicabo.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni maxime ratione voluptatum totam ipsum, fugit sint suscipit sapiente officia vel neque praesentium corrupti veniam, commodi corporis eius dignissimos quos delectus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis atque unde veritatis nisi magni soluta officiis accusantium inventore. Vero fugit corporis molestiae? Dolor eum in esse placeat eius incidunt explicabo.
+                </p>
+                <p>
+                    Si ya estás preparado para empezar con el proceso de aprendizaje puedes pinchar en el siguiente botón: <a href="./cursos/curso_html/curso_html.html" class="boton-cursos">&lt;Introducción a HTML&gt;</a>
+                </p>
+        </section>
+
+        <aside class="contenedor_aside">
+                <h2 class="texto_h2">&num;Opiniones</h2>
+                <div class="opiniones">
+                    <blockquote><q>Excelente curso para aprender a diseñar páginas web! Me ha venido de perlas! Muchísimas gracias</q></blockquote><cite class="opiniones_cita">Alberto Rodríguez</cite>
+                </div>
+                <div class="opiniones">
+                    <blockquote><q>Había intentado aprender con otros cursos pero al final los dejaba por ser muy monótonos. Este en cambio es ágil y dinámico</q></blockquote><cite class="opiniones_cita">Nuria Rus</cite>
+                </div>
+                <div class="opiniones">
+                    <blockquote><q>La verdad es que siempre le he tenido miedo al HTML, no se porqué tenía la sensación que era muy difícil pero con este curso he aprendido mucho</q></blockquote><cite class="opiniones_cita">Jaime Zúñiga</cite>
+                </div>
+                <div class="opiniones">
+                    <blockquote><q>Lo recomiendo! Todo explicado de una forma clara y sencilla! Cualquiera puede aprenderlo sin ningún tipo de conocimiento previo.</q></blockquote><cite class="opiniones_cita">Elena Sanz</cite>
+                </div>
+                <div class="opiniones">
+                    <blockquote><q>Siempre se me ha dado fatal la infórmatica y estaba preocupada porque cuando empecé el curso pensaba que no iba a aprender nada. A medida que fue avanzando le fui cogiendo el gusto a esto del código! Gracias!</q></blockquote><cite class="opiniones_cita">Inma Cruz</cite>
+                </div>
+                <div class="opiniones_mia">
+                    <blockquote><q>¡Muchas gracias! Recordad, no dejéis de aprender nunca. Esto no tiene fin y es cambiante. Lo que sabeis <em>hoy</em> puede que no os sirva para <em>mañana</em>. No os desconecteis!! Nos vemos en los cursos!</q></blockquote><a href="./contacto/contacto.html"><img src="./contacto/img/foto-carlos.png" alt="foto carlos"></a><cite class="opiniones_cita">Carlos López</cite>
+                </div>
+        </aside>
+
+        <section class="contenedor_sidebar">
+            <h2 class="texto_h2">&num;Temario</h2>
+            <h3 class="texto_h3">&lt;Lecciones de HTML&gt;</h3>
+                    <p>
+                        <a href="./cursos/curso_html/curso_html.html" class="boton-cursos">&lt;Introducción a HTML&gt;</a>
+                        <a href="#" class="boton-cursos">&lt;Descubrir el HTML&gt;</a>
+                        <a href="#" class="boton-cursos">&lt;Estructura básica HTML&gt;</a>
+                        <a href="#" class="boton-cursos2">&lt;Etiquetas de HTML&gt;</a>
+                        <a href="#" class="boton-cursos2">&lt;Formatos de Texto&gt;</a>
+                        <a href="#" class="boton-cursos2">&lt;Atributos en HTML&gt;</a>
+                        <a href="#" class="boton-cursos3">&lt;Hipervínculos en HTML&gt;</a>
+                        <a href="#" class="boton-cursos3">&lt;Imágenes en HTML&gt;</a>
+                        <a href="#" class="boton-cursos3">&lt;Listas en HTML&gt;</a>
+                        <a href="#" class="boton-cursos4">&lt;Tablas en HTML&gt;</a>
+                        <a href="#" class="boton-cursos4">&lt;Formularios en HTML&gt;</a>
+                        <a href="#" class="boton-cursos4">&lt;Etiquetas div y span en HTML&gt;</a>
+                        <a href="#" class="boton-cursos5">&lt;Atributos id y class&gt;</a>
+                        <a href="#" class="boton-cursos5">&lt;Elementos inline y block&gt;</a>
+                        <a href="#" class="boton-cursos5">&lt;Maquetación en HTML&gt;</a>
+                    </p>
+            <h3 class="texto_h3">&period;Lecciones de CSS &lbrace;</h3>
+                    <p>
+                        <a href="./cursos/curso_css/curso_css.html" class="boton-cursos6">&period;Introducción a CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos6">&period;Usar CSS en HTML &lbrace;</a>
+                        <a href="#" class="boton-cursos6">&period;Selectores CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos7">&period;Comentarios CSS y Herencia &lbrace;</a>
+                        <a href="#" class="boton-cursos7">&period;Estilo de textos en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos7">&period;Ancho y alto en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos8">&period;Modelo de cajas en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos8">&period;Border, padding y margin en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos8">&period;Background en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos9">&period;Listas en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos9">&period;Tablas en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos9">&period;Enlaces en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos10">&period;Cursor del ratón en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos10">&period;Display y visibility en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos10">&period;Posicionamiento en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos11">&period;Overflow en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos11">&period;Z-index en CSS &lbrace;</a>
+                        <a href="#" class="boton-cursos11">&period;Ejemplos de CSS &lbrace;</a>
+                    </p>
+        </section>
+
+    </div>
+    <h2 class="texto_h2">&num;Elige tu curso y aprende</h2>
+    <div class="contenedor_100_por_ciento">
+        <div class="contenedor_section_20_por_ciento">
+            <a href="./cursos/curso_html/curso_html.html"><img  class="imagenes_contenedor_section_20_por_ciento" src="./images/html5.jpg" alt="banner html5"></a>
+        </div>
+
+        <div class="contenedor_section_20_por_ciento">
+            <a href="./cursos/curso_css/curso_css.html"><img  class="imagenes_contenedor_section_20_por_ciento" src="./images/css3.jpg" alt="banner css3"></a>
+        </div>
+
+        <div class="contenedor_section_20_por_ciento">
+            <a href="#"><img  class="imagenes_contenedor_section_20_por_ciento" src="./images/javascript.jpg" alt="banner javascript"></a>
+        </div>
+
+        <div class="contenedor_section_20_por_ciento">
+            <a href="#"><img  class="imagenes_contenedor_section_20_por_ciento" src="./images/php.jpg" alt="banner php"></a>
+        </div>
+
+        <div class="contenedor_section_20_por_ciento">
+            <a href="#"><img  class="imagenes_contenedor_section_20_por_ciento" src="./images/mysql.jpg" alt="banner mysql"></a>
+        </div>
+
+        <div class="contenedor_section_20_por_ciento">
+            <a href="#"><img  class="imagenes_contenedor_section_20_por_ciento" src="./images/visual.jpg" alt="banner visual studio"></a>
+        </div>
+
+        <div class="contenedor_section_20_por_ciento">
+            <a href="#"><img  class="imagenes_contenedor_section_20_por_ciento" src="./images/photoshop.jpg" alt="banner photoshop"></a>
+        </div>
+
+        <div class="contenedor_section_20_por_ciento">
+            <a href="#"><img  class="imagenes_contenedor_section_20_por_ciento" src="./images/indesign.jpg" alt="banner indesign"></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <img src="./images/imagen-footer.png" alt="imagen del footer">
+            <a href="#">Cursos web online</a>
+            <p> <a href="./contacto/contacto.html">Carlos López</a> © 2022 Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <div class="subir">
+        <a href="#"><img src="./images/icono-subir.png" alt="botón de subir en la página"></a>
+    </div>
+</body>
+</html>
