@@ -3,11 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>Curriculum Vitae de Carlos López</title>
+    <link rel="preload" as="font">
+    <script src="../js/oculta-menu.js"></script> <!-- Script para mostrar/ocultar el menú en la versión móvil desde la 'hamburguesa' -->
+    <script src="../js/navbar.js"></script>
     <meta name="description" content="Curriculum vitae de Carlos López">
     <meta name="keywords" content="experiencia, proyectos, cursos, curriculum">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
 </head>
 
 <body>
@@ -16,10 +21,11 @@
             <a href="#"><img src="../images/cabecera.png" alt="cabecera del web site" class="cabecera"></a>
         </div>
     </header>
-    <nav class="navbar">
-        <label for="mostrar-menu" class="mostrar-menu">&equiv;</label>
-        <input type="checkbox" id="mostrar-menu" role="button" aria-pressed="true"> <!-- El aria-pressed establece o recupera el estado “presionado” de un botón -->
-        <ul class="nav" id="menu">
+    <nav id="ocultanavbar" class="navbar">
+        <div class="toggle">
+            <a href="#" class="mostrar-menu">&equiv;</a>
+        </div>
+        <ul id="idMobile" class="nav" id="menu">
             <li class="menu"><a href="../index.html">Inicio</a>
             <li class="menu"><a href="#">Cursos</a>
                 <ul>

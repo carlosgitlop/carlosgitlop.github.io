@@ -1,6 +1,6 @@
 @import url(./normalize.css);
 
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap");
 
 /* AQUI EMPIEZO A DECLARAR LAS FUENTES ADJUNTAS POR SI GOOGLE SE CAE */
 
@@ -73,7 +73,7 @@ h1 {
 
 h2 {
   position: sticky;
-  top: 9rem;
+  top: 0;
   z-index: 101;
   font-size: 3rem;
   color: white;
@@ -102,12 +102,26 @@ img {
 /* AQUÍ EMPIEZA LA CABECERA [versión movil] */
 
 .cabecera {
-  display:none
+  display:none;
+}
+
+/* Show Hide Sticky Header Speed Control */
+
+#ocultanavbar {
+	transition: all .8s ease!important;
 }
 
 /* AQUÍ TERMINA LA CABECERA [versión movil] */
 
 /* AQUI EMPIEZA EL BLOQUE PARA 'MOSTRAR/OCULTAR EL MENU SOLO PARA DISPOSITIVOS MÓVILES */
+
+.toggle{
+  display: block;
+  }
+  
+.mobile{
+  display: block;
+}
 
 .mostrar-menu {
   display: block;
@@ -181,7 +195,7 @@ header {
   /* Sombra de la cabecera
   box-shadow: 1px 2px 9px #777777; */
   position:sticky;
-  z-index: 100;
+  z-index: 102;
   line-height: 7rem;
   /* Posicionamiento fijo */
   top: 0rem;
@@ -945,6 +959,10 @@ footer div img {
 
 @media screen and (min-width : 768px) and (max-width:1920px) {
 
+  .toggle{
+    display: none;
+  }
+
   .texto_h2 {
     position: relative;
     top: auto;
@@ -962,9 +980,11 @@ footer div img {
   }
 
   .navbar {
+    z-index: 100;
     padding-top: 6rem;
     line-height: 6rem;
     position: fixed;
+    top: 0 !important /* para evitar que se oculte el menú en escritorio */
   }
 
   header {
