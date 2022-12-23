@@ -133,18 +133,10 @@ img {
   /*  text-transform: uppercase; ahora no me hace falta */
 }
 
-/* Oculto el checkbox */
-
-input[type=checkbox] {
-  display: none
+.toggle span {
+  cursor: pointer
 }
-
-/* Muestro el menu cuando checkbox está activo */
-
-input[type=checkbox]:checked~#menu {
-  display: block;
-  margin-top: 3rem
-}
+/* Con con cursor pointer sobre el 'span' de '.toggle' consigo que salga el puntero al acercarme al menu en la vista de dispositivos móviles pero estando en escritorio. He puesto un span mejor que un span que un 'a' porque no quiero que con # me vaya al top 0 de la página ;)
 
 /* AQUI TERMINA EL BLOQUE PARA 'MOSTRAR/OCULTAR EL MENU SOLO PARA DISPOSITIVOS MÓVILES */
 
