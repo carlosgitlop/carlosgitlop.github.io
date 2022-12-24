@@ -8,10 +8,10 @@ function validarFormulario(evento) {
   // INICIO VALIDACIÓN CAMPO NOMBRE
   
   let nombre = document.getElementById ('nombre').value;
-  let nombresinespacios = nombre.replace(/\s/g,""); // almaceno en 'nombressinespacios' para no contabilizar los espacios en blanco
+  let nombrevalido =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ -]{4,20}$/;
 
-  if(!isNaN(nombresinespacios) || nombresinespacios.length < 4) { // hago que no puedan introducir números y que sean como mínimo 4 letras
-    alert('El nombre debe tener como mínimo 4 letras');
+  if(!nombrevalido.test(nombre)) {
+    alert('El nombre debe tener como mínimo 4 letras (máximo 20) y no pueden contener números');
     return;
   }
 
@@ -20,10 +20,10 @@ function validarFormulario(evento) {
   // INICIO VALIDACIÓN CAMPO APELLIDOS
 
   let apellidos = document.getElementById ('apellidos').value;
-  let apellidosvalido =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,}[^a-z][A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,}$/; // almaceno en 'apellidosvalido' exp. reg. para que el apellido tenga este formato: (primer apellido'espacio'segundo apellido). Además evito que se puedan poner números pero si guiones pues hay apellidos compuestos por guiones (antes estaba usando este /^[a-zA-Z]{4,}[^a-z][a-zA-Z]{4,}$/)
+  let apellidosvalido =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,20}[^a-z][A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,20}$/; // almaceno en 'apellidosvalido' exp. reg. para que el apellido tenga este formato: (primer apellido'un espacio'segundo apellido). Además evito que se puedan poner números pero si guiones pues hay apellidos compuestos por guiones (antes estaba usando este /^[a-zA-Z]{4,}[^a-z][a-zA-Z]{4,}$/)
 
   if(!apellidosvalido.test(apellidos)) {
-    alert('Los apellidos deben tener como mínimo 4 letras cada uno y no pueden contener números');
+    alert('Los apellidos deben tener como mínimo 4 letras (máximo 20) cada uno y no pueden contener números. Deben tener este formato: primer apellido"espacio"segundo apellido');
     return;
   }
 
