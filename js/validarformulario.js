@@ -55,7 +55,7 @@ function validarFormulario(evento) {
   // INICIO VALIDACIÓN CAMPO TELÉFONO
 
   let tel = document.getElementById ('tel').value;
-  let telvalido = /^\(\+\d{2,3}\)\d{9}$/; // me falta adaptar para que solamente coja el 34, ahora coge cualquiera de dos cifras
+  let telvalido = /^\(\+\d[34]\)\d{9}$/;
 	
   if(!telvalido.test(tel) ){
 		alert('El teléfono no es válido. Utiliza el formato (+34) seguido de 9 dígitos (todo escrito sin poner ningún espacio)');
