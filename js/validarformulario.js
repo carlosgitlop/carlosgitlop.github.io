@@ -14,20 +14,20 @@ function validarFormulario(evento) {
     return;
   }
 
-   // FIN VALIDACIÓN CAMPO NOMBRE
+  // FIN VALIDACIÓN CAMPO NOMBRE
 
-   // INICIO VALIDACIÓN CAMPO APELLIDOS
+  // INICIO VALIDACIÓN CAMPO APELLIDOS
 
   let apellidos = document.getElementById ('apellidos').value;
-  let apellidossinespacios = apellidos.replace(/\s/g,"");  // almaceno en 'apellidossinespacio' para no contabilizar los espacios en blanco
-  if(!isNaN(apellidossinespacios) || apellidossinespacios.length < 8) {  // hago que no puedan introducir números y que sean como mínimo 4 letras
-    alert('Los apellidos deben tener como mínimo 4 letras cada uno'); // me falta hacer 4 letras mínimo CADA APELLIDO (ahora funciona con 5 letras el primer apellido, un espacio y 3 letras el segundo, por ejemplo)
+  let apellidosvalido =  /[a-zA-Z]{4,}[^a-z][a-zA-Z]{4,}/; // almaceno en 'apellidosvalido' exp. reg. para que el apellido tenga este formato: (primer apellido'espacio'segundo apellido)
+  if(!apellidosvalido.test(apellidos)) {
+    alert('Los apellidos deben tener como mínimo 4 letras cada uno');
     return;
   }
 
-   // FIN VALIDACIÓN CAMPO APELLIDOS
+  // FIN VALIDACIÓN CAMPO APELLIDOS
 
-   // INICIO VALIDACIÓN CAMPO COMENTARIOS
+  // INICIO VALIDACIÓN CAMPO COMENTARIOS
 
   let sugerencias = document.getElementById ('sugerencias').value;
   if(sugerencias.length > 400) {
@@ -37,10 +37,10 @@ function validarFormulario(evento) {
 
   // FIN VALIDACIÓN CAMPO COMENTARIOS
 
+  // INICIO VALIDACIÓN CAMPO EMAIL
+
   let email = document.getElementById ('email').value;
   let emailvalido = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;  // este es más genérico /^(.+\@.+\..+)$/
-
-  // INICIO VALIDACIÓN CAMPO EMAIL
 
 	if(!emailvalido.test(email) ){
 		alert('El email no es válido. Por favor introduce un formato de email válido');
