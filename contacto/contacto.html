@@ -5,6 +5,7 @@
     <title>Curriculum Vitae de Carlos López</title>
     <script src="../js/oculta-menu.js"></script> <!-- Script para mostrar/ocultar el menú en la versión móvil desde la 'hamburguesa' -->
     <script src="../js/navbar.js"></script>
+    <script src="../js/validarformulario.js"></script>
     <meta name="description" content="Curriculum vitae de Carlos López">
     <meta name="keywords" content="experiencia, proyectos, cursos, curriculum">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
@@ -175,21 +176,20 @@
         </div>
     </section>
     <h3 id="h3_formulario">¿Quiéres que diseñemos tu página web?</h3>
-    <form action="recibeform.php" method="post" enctype="multipart/form-data">
+    <form id="formulario" action="recibeform.php" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend id="datos_personales">Datos Personales</legend>
             <label for="nombre">NOMBRE *</label>
-            <input type="text" id="nombre" name="nombre" class="mediana" autocomplete="off" required>
+            <input type="text" id="nombre" name="nombre" class="mediana">
             <label for="apellidos">APELLIDOS *</label>
-            <input type="text" id="apellidos" name="apellidos" placeholder="Primer y segundo apellido" required
-                pattern="[A-Za-z]{2,30} [A-Za-z]{2,30}" class="mediana">
+            <input type="text" id="apellidos" name="apellidos" class="mediana">
         </fieldset>
         <fieldset>
             <legend>Datos de Contacto</legend>
             <label for="email">EMAIL *</label>
-            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
+            <input type="email" id="email" name="email">
             <label for="tel">TELÉFONO *</label>
-            <input type="tel" id="tel" name="tel" placeholder="Número de España" required pattern="[0-9]{9}">
+            <input type="tel" id="tel" name="tel" placeholder="ej:(+34)123456789">
             <label for="direccion">DIRECCIÓN</label>
             <input type="text" id="direccion" name="direccion">
             <label for="cp">C.P.</label>
@@ -200,7 +200,7 @@
         <fieldset>
             <legend>Comentarios</legend>
             <label for="sugerencias"><em>Pregúntanos precio sin ningún compromiso</em></label>
-            <textarea id="sugerencias" name="sugerencias" class="grande" rows="5"></textarea>
+            <textarea id="sugerencias" name="sugerencias" class="grande" rows="5" placeholder="Máximo 400 caracteres"></textarea>
         </fieldset>
         <fieldset>
             <input type="submit" value="Envíar datos" class="margen-submit">
