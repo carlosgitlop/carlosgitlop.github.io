@@ -8,7 +8,7 @@ function validarFormulario(evento) {
   // INICIO VALIDACIÓN CAMPO NOMBRE
   
   let nombre = document.getElementById ('nombre').value;
-  let nombrevalido =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ -]{4,20}$/;
+  let nombrevalido =  /^([a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]{4,20}[\,\-\.]{0,1}[\s]{0,1}){1,3}$/; // hacer para que permita nombres compuestos y un único espacio entre el nombre compuesto
 
   if(!nombrevalido.test(nombre)) {
     alert('El nombre debe tener como mínimo 4 letras (máximo 20) y no pueden contener números');
