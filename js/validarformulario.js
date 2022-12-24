@@ -7,11 +7,11 @@ function validarFormulario(evento) {
 
   // INICIO VALIDACIÓN CAMPO NOMBRE
   
-  let nombre = document.getElementById ('nombre').value;
-  let nombrevalido =  /^([a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]{4,20}[\,\-\.]{0,1}[\s]{0,1}){1,3}$/; // hacer para que permita nombres compuestos y un único espacio entre el nombre compuesto
+  let nombre = document.getElementById ('nombre').value.trim();
+  let nombrevalido =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,15}[^a-z]{0,1}[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{0,15}$/; // hacer para que permita nombres compuestos y un único espacio entre el nombre
 
   if(!nombrevalido.test(nombre)) {
-    alert('El nombre debe tener como mínimo 4 letras (máximo 20) y no pueden contener números');
+    alert('El nombre debe tener como mínimo 4 letras (máximo 15). Si es compuesto sería de la forma (15 letras + 15 letras máximo) y no pueden contener números');
     return;
   }
 
@@ -20,7 +20,7 @@ function validarFormulario(evento) {
   // INICIO VALIDACIÓN CAMPO APELLIDOS
 
   let apellidos = document.getElementById ('apellidos').value;
-  let apellidosvalido =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,20}[^a-z][A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,20}$/; // almaceno en 'apellidosvalido' exp. reg. para que el apellido tenga este formato: (primer apellido'un espacio'segundo apellido). Además evito que se puedan poner números pero si guiones pues hay apellidos compuestos por guiones (antes estaba usando este /^[a-zA-Z]{4,}[^a-z][a-zA-Z]{4,}$/)
+  let apellidosvalido =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,20}[^a-z]{0,1}[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,20}$/; // almaceno en 'apellidosvalido' exp. reg. para que el apellido tenga este formato: (primer apellido'un espacio'segundo apellido). Además evito que se puedan poner números pero si guiones pues hay apellidos compuestos por guiones (antes estaba usando este /^[a-zA-Z]{4,}[^a-z][a-zA-Z]{4,}$/)
 
   if(!apellidosvalido.test(apellidos)) {
     alert('Los apellidos deben tener como mínimo 4 letras (máximo 20) cada uno y no pueden contener números. Deben tener este formato: primer apellido"espacio"segundo apellido');
