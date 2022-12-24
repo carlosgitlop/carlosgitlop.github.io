@@ -14,14 +14,14 @@ function validarFormulario(evento) {
 
   let apellidos = document.getElementById ('apellidos').value;
   let apellidossinespacios = apellidos.replace(/\s/g,"");  // almaceno en apellidossinespacio para no contabilizar los espacios en blanco
-  if(!isNaN(apellidossinespacios) || apellidossinespacios.length < 8) {  // tengo que hacer que sean 4caracteres y 4caracteres mínimo
+  if(!isNaN(apellidossinespacios) || apellidossinespacios.length < 8) {  // falta hacer 4 caracteres mínimo cada apellido
     alert('Los apellidos debe tener como mínimo 4 letras cada uno');
     return;
   }
 
   let sugerencias = document.getElementById ('sugerencias').value;
   if(sugerencias.length > 400) {
-    alert('Las sugerencias no pueden tener más de 400 caracteres');
+    alert('Has escrito ' + sugerencias.length + ' ' + 'caracteres.' + ' ' + 'Los comentarios no pueden tener más de 400 caracteres');
     return;
   }
 
