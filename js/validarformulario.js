@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
 function validarFormulario(evento) {
   evento.preventDefault();
   
-  let nombre = document.getElementById ('nombre').value; // tengo que hacer que no puedan insertar números
-  if(nombre.length < 4) {
+  let nombre = document.getElementById ('nombre').value;
+  if(!isNaN(nombre) || nombre.length < 4) {
     alert('El nombre debe tener como mínimo 4 letras');
     return;
   }
 
-  let apellidos = document.getElementById ('apellidos').value; // tengo que hacer que no puedan insertar números
-  if(apellidos.length < 8) {  // tengo que hacer que no cuente los espacios en blanco
+  let apellidos = document.getElementById ('apellidos').value;
+  if(!isNaN(apellidos) || apellidos.length < 8) {  // tengo que hacer que no cuente los espacios en blanco
     alert('Los apellidos debe tener como mínimo 4 letras cada uno');
     return;
   }
