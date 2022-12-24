@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
 function validarFormulario(evento) {
   evento.preventDefault();
   
-  let nombre = document.getElementById ('nombre').value;
+  let nombre = document.getElementById ('nombre').value; 
   if(!isNaN(nombre) || nombre.length < 4) {
     alert('El nombre debe tener como mínimo 4 letras');
     return;
   }
 
   let apellidos = document.getElementById ('apellidos').value;
-  if(!isNaN(apellidos) || apellidos.length < 8) {  // tengo que hacer que no cuente los espacios en blanco
+  if(!isNaN(apellidos) || apellidos.length < 8) {  // tengo que hacer que solo cuente un espacio en blanco entre apellido y apellido y no cuente el resto
     alert('Los apellidos debe tener como mínimo 4 letras cada uno');
     return;
   }
