@@ -43,7 +43,7 @@ function validarFormulario(evento) {
   // INICIO VALIDACIÓN CAMPO EMAIL
 
 	if(!emailvalido.test(email) ){
-		alert('El email introducido no es válido. Por favor introduce un formato de email válido');
+		alert('El email no es válido. Por favor introduce un formato de email válido');
 		return;
 	}
 
@@ -55,7 +55,7 @@ function validarFormulario(evento) {
   let telvalido = /^\(\+\d{2,3}\)\d{9}$/; // me falta adaptar para que solamente coja el 34, ahora coge cualquiera de dos cifras
 	
   if(!telvalido.test(tel) ){
-		alert('El teléfono introducido no es válido. Utiliza el formato (+34) seguido de 9 dígitos (todo escrito sin poner ningún espacio)');
+		alert('El teléfono no es válido. Utiliza el formato (+34) seguido de 9 dígitos (todo escrito sin poner ningún espacio)');
 		return;
 	}  
 
