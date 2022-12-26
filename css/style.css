@@ -188,7 +188,7 @@ header {
   box-shadow: 1px 2px 9px #777777; */
   position:sticky;
   z-index: 102;
-  line-height: 7rem;
+  line-height: 5rem;
   /* Posicionamiento fijo */
   top: 0rem;
   /* Permanezca arriba */
