@@ -203,8 +203,8 @@ header {
 
 ul {
   display: none;
-  padding-inline-start: 1rem;
-  overflow-y: auto;
+  padding-inline-start: 0rem;
+  overflow-y: scroll
 }
 
   /* Listas del menu sin decoración */
