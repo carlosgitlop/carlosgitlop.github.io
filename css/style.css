@@ -204,8 +204,8 @@ header {
 ul {
   display: none;
   padding-inline-start: 0rem;
-  overflow-y: scroll;
-  height: 90vh
+  /* overflow-y: scroll;
+  height: 90vh */
 
 }
 
@@ -261,7 +261,8 @@ li {
 
 .nav li ul li {
   position: relative;
-  display: inline-block
+  display: inline-block;
+  overflow-y: scroll
 }
 
 .nav li ul li ul {
@@ -1024,7 +1025,8 @@ footer div img {
 
   .nav li ul li ul {
     margin-left: 5rem;
-    padding-left: 5rem
+    padding-left: 5rem;
+    overflow: hidden
   }
 
   .caja-busqueda input#search::-webkit-input-placeholder {
