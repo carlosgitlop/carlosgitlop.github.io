@@ -1015,6 +1015,7 @@ footer div img {
   .nav li a {
     transition-duration: .5s;
     height: auto;
+    width: 80%
   }
 
   .nav li a:hover {
