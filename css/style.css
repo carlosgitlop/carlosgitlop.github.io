@@ -205,7 +205,7 @@ ul {
   display: none;
   padding-inline-start: 0px;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: touch;
 }
 
   /* Listas del menu sin decoración */
