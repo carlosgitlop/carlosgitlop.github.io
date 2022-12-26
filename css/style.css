@@ -205,7 +205,6 @@ ul {
   display: none;
   padding-inline-start: 1rem;
   overflow-y: auto;
-  height: 100vh
 }
 
   /* Listas del menu sin decoración */
@@ -234,8 +233,7 @@ li {
   margin: 0rem;
   display: block;
   font-weight: lighter;
-  font-size: 2rem;
-  height: 12rem
+  font-size: 2rem
 }
 
 /* Hago que cada sección del menú se "ilumine" al posicionar el cursor */
