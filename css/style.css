@@ -204,8 +204,8 @@ header {
 ul {
   display: none;
   padding-inline-start: 0rem;
-  overflow-y: scroll;
-  height: 50rem
+  overflow-y: visible;
+  height: 70rem
 }
 
   /* Listas del menu sin decoración */
