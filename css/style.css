@@ -1023,10 +1023,13 @@ footer div img {
     transition: all .3s ease-in-out
   }
 
+  .nav li ul li {
+    overflow: hidden
+  }
+
   .nav li ul li ul {
     margin-left: 5rem;
     padding-left: 5rem;
-    overflow: hidden
   }
 
   .caja-busqueda input#search::-webkit-input-placeholder {
