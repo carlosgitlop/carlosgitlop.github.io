@@ -203,8 +203,9 @@ header {
 
 ul {
   display: none;
-  padding-inline-start: 0px;
-  height: 100vh
+  padding-inline-start: 1rem;
+  overflow-y: scroll;
+  /*height: 100vh*/
 }
 
   /* Listas del menu sin decoración */
@@ -233,7 +234,8 @@ li {
   margin: 0rem;
   display: block;
   font-weight: lighter;
-  font-size: 2rem
+  font-size: 2rem;
+  height: 12rem
 }
 
 /* Hago que cada sección del menú se "ilumine" al posicionar el cursor */
@@ -263,7 +265,9 @@ li {
 }
 
 .nav li ul li ul {
-  top: 0px;
+  top: 0rem;
+  margin-left: 0rem;
+  padding-left: 2rem
 }
 
 .linea_submenu {
@@ -1003,11 +1007,13 @@ footer div img {
     display: flex;
     height: auto;
     overflow: hidden;
-    margin-bottom: 0
+    margin-bottom: 0;
+    padding-inline-start: 0rem;
   }
 
   .nav li a {
     transition-duration: .5s;
+    height: auto;
   }
 
   .nav li a:hover {
@@ -1017,7 +1023,8 @@ footer div img {
   }
 
   .nav li ul li ul {
-    left: 20%;
+    margin-left: 5rem;
+    padding-left: 5rem
   }
 
   .caja-busqueda input#search::-webkit-input-placeholder {
