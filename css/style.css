@@ -116,7 +116,8 @@ img {
 /* AQUI EMPIEZA EL BLOQUE PARA 'MOSTRAR/OCULTAR EL MENU SOLO PARA DISPOSITIVOS MÓVILES */
 
 .toggle{
-  display: block
+  display: block;
+  margin-bottom: 1rem
   }
   
 .mobile{
@@ -958,7 +959,8 @@ footer div img {
 @media screen and (min-width : 768px) and (max-width:1920px) {
 
   .toggle{
-    display: none
+    display: none;
+    margin-bottom: 0rem;
   }
 
   .texto_h2 {
