@@ -205,7 +205,8 @@ ul {
   display: none;
   padding-inline-start: 0rem;
   overflow-y: scroll;
-  height: 80vh
+  height: 90vh
+
 }
 
   /* Listas del menu sin decoración */
@@ -220,7 +221,7 @@ ol {
 ul li,
 li a {
   width: 100%;
-  text-align: center
+  text-align: center;
 }
 
 li {
@@ -240,7 +241,7 @@ li {
 /* Hago que cada sección del menú se "ilumine" al posicionar el cursor */
 
 .menu a:hover {
-  color:#d1cfdc
+  color:#d1cfdc;
 }
 
 .nav li ul {
@@ -251,7 +252,7 @@ li {
 }
 
 .nav li:hover>ul {
-  display: block
+  display: block;
 }
 
 .nav li:hover>ul li {
