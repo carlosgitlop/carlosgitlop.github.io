@@ -46,7 +46,7 @@ body {
   /* Tipografía del body de la página */
   font-family: Lato, sans-serif;
   /* Margen superior del body = 0 */
-  margin: 0;
+  margin: 0
 }
 
 p {
@@ -102,13 +102,13 @@ img {
 /* AQUÍ EMPIEZA LA CABECERA [versión movil] */
 
 .cabecera {
-  display:none;
+  display:none
 }
 
 /* Show Hide Sticky Header Speed Control */
 
 #ocultanavbar {
-	transition: all .8s ease!important;
+	transition: all .8s ease!important
 }
 
 /* AQUÍ TERMINA LA CABECERA [versión movil] */
@@ -116,11 +116,11 @@ img {
 /* AQUI EMPIEZA EL BLOQUE PARA 'MOSTRAR/OCULTAR EL MENU SOLO PARA DISPOSITIVOS MÓVILES */
 
 .toggle{
-  display: block;
+  display: block
   }
   
 .mobile{
-  display: block;
+  display: block
 }
 
 .mostrar-menu {
@@ -129,7 +129,7 @@ img {
   text-decoration: none;
   color: #7e7d86;
   text-align: center;
-  font-weight: lighter;
+  font-weight: lighter
   /*  text-transform: uppercase; ahora no me hace falta */
 }
 
@@ -196,7 +196,7 @@ header {
   /* Ancho 100% */
   background-color: rgb(0 0 0 / 85%);
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px)
   /* con el 85% de opacidad y blur del backdrop-filter consigo ese efecto tan chulo del menu
   Las -webkit son para compatibilidades con smartphones y algunos navegadores (macos) */
   }
@@ -205,14 +205,14 @@ ul {
   display: none;
   padding-inline-start: 0px;
   height: 100vh;
-  overflow-y: touch;
+  overflow-y: touch
 }
 
   /* Listas del menu sin decoración */
 
 ul,
 ol {
-  list-style: none;
+  list-style: none
 }
 
 /* Hago que todos los enlaces del menu tengan el 100% de ancho */
@@ -220,11 +220,11 @@ ol {
 ul li,
 li a {
   width: 100%;
-  text-align: center;
+  text-align: center
 }
 
 li {
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.1rem
 }
 
 .nav li a {
@@ -234,33 +234,33 @@ li {
   margin: 0rem;
   display: block;
   font-weight: lighter;
-  font-size: 2rem;
+  font-size: 2rem
 }
 
 /* Hago que cada sección del menú se "ilumine" al posicionar el cursor */
 
 .menu a:hover {
-  color:#d1cfdc;
+  color:#d1cfdc
 }
 
 .nav li ul {
   display: none;
   /* Con display "none" hago que no se quede mostrado abierto permanentemente el submenú */
   position: relative;
-  min-width: 140px;
+  min-width: 140px
 }
 
 .nav li:hover>ul {
-  display: block;
+  display: block
 }
 
 .nav li:hover>ul li {
-  display: block;
+  display: block
 }
 
 .nav li ul li {
   position: relative;
-  display: inline-block;
+  display: inline-block
 }
 
 .nav li ul li ul {
@@ -272,7 +272,7 @@ li {
 }
 
 .interlineado_submenu {
-  line-height: 3rem;
+  line-height: 3rem
 }
 
 /* AQUÍ TERMINA EL MENU */
@@ -303,7 +303,7 @@ li {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  color: rgb(196, 196, 196);
+  color: rgb(196, 196, 196)
 }
 
 .caja-busqueda input#search::-webkit-input-placeholder {
@@ -352,7 +352,7 @@ li {
   display: flex;
   flex-direction: column;
   column-gap: 2rem;
-  margin: 0 auto;
+  margin: 0 auto
 }
 
 .contenedor_100_por_ciento {
@@ -385,12 +385,12 @@ li {
 .imagenes_contenedor_section_20_por_ciento {
   max-width: 100%;
   margin: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem
 }
 
 .imagenes_contenedor_main_cursos {
   max-width: 100%;
-  margin: 0;
+  margin: 0
 }
 
 /* INICIO CONTENEDOR FLEX PANTALLA DE CONTACTO */
@@ -421,7 +421,7 @@ article div img {
 .flex-item-2, .flex-item-3, .flex-item-aplicaciones, .flex-item-desarrollador, .flex-item-experiencia, .flex-item-formacion, .flex-item-lenguajes, .flex-item-proyectos, .flex-item-referencia {
   box-shadow: 0 2px 4px 0 rgb(14 30 37 / 12%);
   -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease
 }
 
 .flex-item-2:hover, .flex-item-3:hover, .flex-item-aplicaciones:hover, .flex-item-desarrollador:hover, .flex-item-experiencia:hover, .flex-item-formacion:hover, .flex-item-lenguajes:hover, .flex-item-proyectos:hover, .flex-item-referencia:hover {
@@ -448,7 +448,7 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.3)
 .flex-item-3 {
   /* background-color: white; */
   border-radius: 1rem;
-  border: 0.2rem solid rgb(220, 220, 220);
+  border: 0.2rem solid rgb(220, 220, 220)
   /* color: rgb(91, 73, 0); */
 
 }
@@ -456,43 +456,43 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.3)
 .flex-item-formacion {
   /* background-color:rgb(241, 253, 250); */
   border: 0.2rem solid rgb(220, 220, 220);
-  border-radius: 1rem;
+  border-radius: 1rem
 }
 
 .flex-item-aplicaciones {
   /* background-color:rgb(253, 241, 243); */
   border: 0.2rem solid rgb(220, 220, 220);
-  border-radius: 1rem;
+  border-radius: 1rem
 }
 
 .flex-item-lenguajes {
   /* background-color:rgb(253, 249, 241); */
   border: 0.2rem solid rgb(220, 220, 220);
-  border-radius: 1rem;
+  border-radius: 1rem
 }
 
 .flex-item-experiencia {
   /* background-color:rgb(246, 241, 253); */
   border: 0.2rem solid rgb(220, 220, 220);
-  border-radius: 1rem;
+  border-radius: 1rem
 }
 
 .flex-item-proyectos {
   /* background-color:rgb(253, 241, 250); */
   border: 0.2rem solid rgb(220, 220, 220);
-  border-radius: 1rem;
+  border-radius: 1rem
 }
 
 .flex-item-desarrollador {
   /* background-color:rgb(241, 243, 253); */
   border: 0.2rem solid rgb(220, 220, 220);
-  border-radius: 1rem;
+  border-radius: 1rem
 }
 
 .flex-item-referencia {
   /* background-color:rgb(233, 233, 233); */
   border: 0.2rem solid rgb(220, 220, 220);
-  border-radius: 1rem;
+  border-radius: 1rem
 }
 
 .flex-container {
@@ -558,7 +558,7 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.3)
   flex-direction: column;
   width: 100%;
   background-color: #ededed;
-  align-items: center;
+  align-items: center
 }
 
 .opiniones, .opiniones_mia {
@@ -573,17 +573,17 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.3)
   box-shadow: 0 2px 4px 0 rgb(14 30 37 / 12%);
   position: relative;
   -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease
 }
 
 .opiniones_mia {
-  background: #fad000;
+  background: #fad000
 }
 
 .opiniones blockquote, .opiniones_mia blockquote {
   line-height: 4rem;
   position: relative;
-  font-size: 2rem;
+  font-size: 2rem
 }
 
 .opiniones_cita {
@@ -622,51 +622,51 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.3)
   text-align: center;
   margin-top: 2.5rem;
   display: block;
-  border: none;
+  border: none
 }
 
 .boton-cursos {
-  background-color:cornflowerblue;
+  background-color:cornflowerblue
 }
 
 .boton-cursos2 {
-  background-color:rgb(47, 103, 57);
+  background-color:rgb(47, 103, 57)
 }
 
 .boton-cursos3 {
-  background-color:rgb(165, 105, 53);
+  background-color:rgb(165, 105, 53)
 }
 
 .boton-cursos4 {
-  background-color:rgb(98, 108, 109);
+  background-color:rgb(98, 108, 109)
 }
 
 .boton-cursos5 {
-  background-color:rgb(144, 135, 37);
+  background-color:rgb(144, 135, 37)
 }
 
 .boton-cursos6 {
-  background-color:rgb(45, 45, 45);
+  background-color:rgb(45, 45, 45)
 }
 
 .boton-cursos7 {
-  background-color:rgb(200, 103, 0);
+  background-color:rgb(200, 103, 0)
 }
 
 .boton-cursos8 {
-  background-color:rgb(28, 28, 185);
+  background-color:rgb(28, 28, 185)
 }
 
 .boton-cursos9 {
-  background-color:rgb(0, 84, 8);
+  background-color:rgb(0, 84, 8)
 }
 
 .boton-cursos10 {
-  background-color:rgb(75, 11, 15);
+  background-color:rgb(75, 11, 15)
 }
 
 .boton-cursos11 {
-  background-color:rgb(37, 0, 100);
+  background-color:rgb(37, 0, 100)
 }
 
 /* FIN SECCION CURSOS (columna derecha del index) */
@@ -733,7 +733,7 @@ input[type='submit'] {
   border: none;
   padding: 0.5rem 1rem;
   font-weight: bold;
-  margin-right: 1rem;
+  margin-right: 1rem
 }
 
 input[type='submit']:hover {
@@ -800,7 +800,7 @@ textarea {
 }
 
 .margen-submit {
-  margin-top: 0rem;
+  margin-top: 0rem
 }
 
 #datos_personales {
@@ -934,7 +934,7 @@ footer div img {
   height: 0;
   margin-right:2rem;
   margin-left:2rem;
-  overflow: hidden;
+  overflow: hidden
 }
 .contenedor-video iframe,
 .contenedor-video object,
@@ -954,7 +954,7 @@ footer div img {
 @media screen and (min-width : 768px) and (max-width:1920px) {
 
   .toggle{
-    display: none;
+    display: none
   }
 
   .texto_h2 {
@@ -963,13 +963,13 @@ footer div img {
     z-index: auto;
     color:white;
     background-color: black;
-    width:100%;
+    width:100%
   }
 
   .cabecera {
     display:block;
     width: 100vw;
-    margin:0;
+    margin:0
     /* background-color: rgb(68, 68, 68) */
   }
 
@@ -991,7 +991,7 @@ footer div img {
     /* Posicionamiento fijo */
     top: 0;
     /* Permanezca arriba */
-    width: 100%;
+    width: 100%
     /* Ancho 100% */
     /* background-color: black; */
     }
@@ -1003,17 +1003,17 @@ footer div img {
   ul {
     display: flex;
     height: auto;
-    overflow: hidden;
+    overflow: hidden
   }
 
   .nav li a {
-    transition-duration: .5s;
+    transition-duration: .5s
   }
 
   .nav li a:hover {
     -webkit-transform:scale(1.2);
     transform:scale(1.2);
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
   }
 
   .nav li ul li ul {
@@ -1038,7 +1038,7 @@ footer div img {
 
   .slider-texto{
     width: 70%;
-    margin-top: 19rem;
+    margin-top: 19rem
   }
 
   .contenedor_index {
@@ -1068,13 +1068,13 @@ footer div img {
   }
 
   .imagenes_contenedor_section_20_por_ciento {
-    width: 100%;
+    width: 100%
   }
 
   .imagenes_contenedor_section_20_por_ciento:hover {
     -webkit-transform:scale(1.1);
     transform:scale(1.1);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3)
   }
 
   .contenedor_section {
@@ -1121,7 +1121,7 @@ footer div img {
   .boton-cursos10,
   .boton-cursos11 {
     padding: 1rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3)
   }
 
   .boton-cursos:hover,
@@ -1142,13 +1142,13 @@ footer div img {
 
   .contenedor_100_por_ciento {
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: space-between
   }
 
   .contenedor_section_20_por_ciento {
     display:flex;
     width:12%;
-    margin:0;
+    margin:0
   }
 
   .flex-container-cabecera {
@@ -1186,7 +1186,7 @@ footer div img {
     min-width: 24rem;
     display: flex;
     align-content: space-between;
-    align-items: baseline;
+    align-items: baseline
   }
 
   .iconos-curriculum {
@@ -1215,7 +1215,7 @@ footer div img {
 
   fieldset {
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem
   }
 
   #h3_formulario {
@@ -1266,7 +1266,7 @@ footer div img {
   bottom: 2rem;
   right: 2rem;
   transition: all 300ms ease 0ms;
-	z-index: 99;
+	z-index: 99
 
 }
 
@@ -1281,7 +1281,7 @@ footer div img {
   /* INICIO IFRAME VÍDEO YOUTUBE */
 
 .contenedor-video {
-  margin-right:0rem;
+  margin-right:0rem
 }
 
   /* FIN IFRAME VÍDEO YOUTUBE */
@@ -1295,7 +1295,7 @@ footer div img {
 @media screen and (min-width : 768px) and (max-width:990px) {
 
   .contenedor_sidebar p {
-    font-size: 1.4rem;
+    font-size: 1.4rem
   }
 
   h2 {
@@ -1309,7 +1309,7 @@ footer div img {
 }
 
 article div img {
-  position: relative;
+  position: relative
 }
 
 }
