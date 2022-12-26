@@ -1007,7 +1007,7 @@ footer div img {
   }
 
   .nav li a {
-    transition-duration: .5s
+    transition-duration: .5s;
   }
 
   .nav li a:hover {
@@ -1017,7 +1017,7 @@ footer div img {
   }
 
   .nav li ul li ul {
-    left: 20%
+    left: 20%;
   }
 
   .caja-busqueda input#search::-webkit-input-placeholder {
@@ -1310,6 +1310,12 @@ footer div img {
 
 article div img {
   position: relative
+}
+
+.nav ul li ul li a {
+  font-size: 1.8rem;
+  width: 80%;
+  margin-bottom: 0
 }
 
 }
