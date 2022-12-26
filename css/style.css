@@ -204,8 +204,7 @@ header {
 ul {
   display: none;
   padding-inline-start: 0px;
-  height: 100vh;
-  overflow-y: auto
+  height: 100vh
 }
 
   /* Listas del menu sin decoración */
@@ -976,7 +975,7 @@ footer div img {
   .navbar {
     z-index: 100;
     padding-top: 6rem;
-    line-height: 6rem;
+    line-height: 7rem;
     position: fixed;
     top: 0 !important /* para evitar que se oculte el menú en escritorio */
   }
@@ -1003,7 +1002,8 @@ footer div img {
   ul {
     display: flex;
     height: auto;
-    overflow: hidden
+    overflow: hidden;
+    margin-bottom: 0
   }
 
   .nav li a {
@@ -1315,7 +1315,7 @@ article div img {
 .nav ul li ul li a {
   font-size: 1.8rem;
   width: 80%;
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 }
