@@ -1,3 +1,5 @@
+// INICIO VALIDACIÓN FORMULARIO
+
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("formulario").addEventListener('submit', validarFormulario); 
 });
@@ -68,3 +70,5 @@ this.submit();
 alert('El formulario se ha enviado correctamente');
 
 }
+
+// FIN VALIDACIÓN FORMULARIO
