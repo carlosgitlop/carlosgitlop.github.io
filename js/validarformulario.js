@@ -13,7 +13,11 @@ function validarFormulario(evento) {
   let nombrevalido =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,15}[\s]{0,1}[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{0,15}$/; // Con esta exp. reg. hago que no coja números y que permita nombres compuestos con un único espacio entre el nombre. Además de extensión entre 4 y 15 letras.
 
   if(!nombrevalido.test(nombre)) {
-    alert('El nombre debe tener como mínimo 4 letras (máximo 15). Si es compuesto sería de la forma (15 letras + 15 letras máximo) y no pueden contener números');
+    Swal.fire({
+      icon: 'warning',
+      title: 'Advertencia',
+      text: 'El nombre debe tener como mínimo 4 letras (máximo 15). Si es compuesto sería de la forma (15 letras + 15 letras máximo) y no pueden contener números',
+    })
     return;
   }
 
@@ -25,7 +29,11 @@ function validarFormulario(evento) {
   let apellidosvalido =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,20}[\s]{0,1}[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,20}$/; // almaceno en 'apellidosvalido' exp. reg. para que el apellido tenga este formato: (primer apellido'un espacio'segundo apellido). Además evito que se puedan poner números pero si guiones pues hay apellidos compuestos por guiones (antes estaba usando este /^[a-zA-Z]{4,}[^a-z][a-zA-Z]{4,}$/)
 
   if(!apellidosvalido.test(apellidos)) {
-    alert('Los apellidos deben tener como mínimo 4 letras (máximo 20) cada uno y no pueden contener números. Deben tener este formato: primer apellido"espacio"segundo apellido');
+    Swal.fire({
+      icon: 'warning',
+      title: 'Advertencia',
+      text: 'Los apellidos deben tener como mínimo 4 letras (máximo 20) cada uno y no pueden contener números. Deben tener este formato: primer apellido"espacio"segundo apellido',
+    })
     return;
   }
 
@@ -36,7 +44,11 @@ function validarFormulario(evento) {
   let sugerencias = document.getElementById ('sugerencias').value;
   
   if(sugerencias.length > 400) {
-    alert('Has escrito ' + sugerencias.length + ' ' + 'caracteres.' + ' ' + 'Los comentarios no pueden tener más de 400 caracteres');
+    Swal.fire({
+      icon: 'warning',
+      title: 'Advertencia',
+      text: 'Has escrito ' + sugerencias.length + ' ' + 'caracteres.' + ' ' + 'Los comentarios no pueden tener más de 400 caracteres',
+    })
     return;
   }
 
@@ -48,7 +60,11 @@ function validarFormulario(evento) {
   let emailvalido = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;  // este es más genérico /^(.+\@.+\..+)$/
 
 	if(!emailvalido.test(email) ){
-		alert('El email no es válido. Por favor introduce un formato de email válido');
+    Swal.fire({
+      icon: 'warning',
+      title: 'Advertencia',
+      text: 'El email no es válido. Por favor introduce un formato de email válido',
+    })
 		return;
 	}
 
@@ -60,14 +76,23 @@ function validarFormulario(evento) {
   let telvalido = /^\(\+\d[34]\)\d{9}$/;
 	
   if(!telvalido.test(tel) ){
-		alert('El teléfono no es válido. Utiliza el formato (+34) seguido de 9 dígitos (todo escrito sin poner ningún espacio)');
+    Swal.fire({
+      icon: 'warning',
+      title: 'Advertencia',
+      text: 'El teléfono no es válido. Utiliza el formato (+34) seguido de 9 dígitos (todo escrito sin poner ningún espacio)',
+    })
 		return;
 	}  
 
   // FIN VALIDACIÓN CAMPO TELÉFONO
 
+  Swal.fire({
+    icon: 'success',
+    title: 'El formulario se ha enviado correctamente',
+    showConfirmButton: false,
+    timer: 1500
+  })
 this.submit();
-alert('El formulario se ha enviado correctamente');
 
 }
 
