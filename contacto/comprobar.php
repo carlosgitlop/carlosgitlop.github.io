@@ -1,12 +1,19 @@
-<?php 
-
-isset($_POST["nombre"]) ? print $_POST["nombre"] : "";'<br>';
-isset($_POST["apellidos"]) ? print $_POST["apellidos"] : "";'<br>';
-isset($_POST["email"]) ? print $_POST["email"] : "";'<br>';
-isset($_POST["tel"]) ? print $_POST["tel"] : "";'<br>';
-isset($_POST["direccion"]) ? print $_POST["direccion"] : "";'<br>';
-isset($_POST["cp"]) ? print $_POST["cp"] : "";'<br>';
-isset($_POST["ciudad"]) ? print $_POST["ciudad"] : "";'<br>';
-isset($_POST["sugerencias"]) ? print $_POST["sugerencias"] : "";'<br>';
-
+<?php
+// almaceno cada campo introducido en su respectiva variable
+$nombre = $_POST['nombre'];
+echo $nombre;'<br/>';
+$apellidos = $_POST['apellidos'];
+echo $apellidos;'<br/>';
+$email = $_POST['email'];
+echo $email;'<br/>';
+$tel = $_POST['tel'];
+echo $tel;'<br/>';
+$direccion = $_POST['direccion'];
+echo $direccion;'<br/>';
+$cp = $_POST['cp'];
+echo $cp;'<br/>';
+$ciudad = $_POST['ciudad'];
+echo $ciudad;'<br/>';
+$sugerencias = $_POST['sugerencias'];
+echo $sugerencias;
 ?>
