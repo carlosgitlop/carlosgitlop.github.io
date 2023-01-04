@@ -93,7 +93,6 @@ function validarFormulario(evento) {
     timer: 2500
   }) 
   
-  return; // tengo que quitar el return para que se envíe el formulario. Lo dejo para ver el sweet alert
 
 this.submit();
 
