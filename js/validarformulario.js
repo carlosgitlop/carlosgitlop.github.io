@@ -25,7 +25,7 @@ function validarFormulario(evento) {
 
   // INICIO VALIDACIÓN CAMPO APELLIDOS
 
-  let apellidos = document.getElementById ('apellidos').value;
+  let apellidos = document.getElementById ('apellidos').value.trim();
   let apellidosvalido =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,20}[\s]{0,1}[A-ZÑa-zñáéíóúÁÉÍÓÚ-]{4,20}$/; // almaceno en 'apellidosvalido' exp. reg. para que el apellido tenga este formato: (primer apellido'un espacio'segundo apellido). Además evito que se puedan poner números pero si guiones pues hay apellidos compuestos por guiones (antes estaba usando este /^[a-zA-Z]{4,}[^a-z][a-zA-Z]{4,}$/)
 
   if(!apellidosvalido.test(apellidos)) {
