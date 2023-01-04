@@ -94,7 +94,7 @@ function validarFormulario(evento) {
   }) 
   
 
-setTimeout(() => { this.submit(); }, 5000);
+setTimeout(() => { this.submit(); }, 3000);
 
 }
 
