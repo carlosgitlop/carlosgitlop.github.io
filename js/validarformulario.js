@@ -90,7 +90,7 @@ function validarFormulario(evento) {
     icon: 'success',
     title: 'El formulario se ha enviado correctamente',
     showConfirmButton: false,
-    timer: 2500
+    timer: 3500
   }) 
   
 
