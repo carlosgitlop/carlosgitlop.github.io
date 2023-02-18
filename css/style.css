@@ -239,6 +239,27 @@ li {
   font-size: 2rem
 }
 
+/* Inicio Reglas para las listas (ul y li) en texto corrido */
+
+ul.ul_texto{
+  font-size: 1.8rem;
+  /* Alto de línea */
+  line-height: 1.5;
+  /* Margen izquierdo */
+  margin-left: 4rem;
+  /* Margen derecho */
+  margin-right: 4rem;
+  display:block;
+  list-style-type: disc;
+  overflow: initial;
+}
+
+ul li.li_texto{
+  text-align: left;
+}
+
+/* Inicio Reglas para las listas en texto corrido */
+
 /* Hago que cada sección del menú se "ilumine" al posicionar el cursor */
 
 .menu a:hover {
