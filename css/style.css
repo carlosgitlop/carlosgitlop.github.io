@@ -606,6 +606,21 @@ box-shadow: 0 5px 15px rgba(0,0,0,0.3)
   background: #fad000
 }
 
+.opiniones_alumnos {
+  width: 15%;
+  border-radius: 15rem;
+  background-color:  #ededed;
+  margin-left: 1rem;
+  float: right
+}
+
+.valoraciones_alumnos {
+  width: 30%;
+  margin-left: 2rem;
+  background-color: #ffffff;
+  float: left;
+}
+
 .opiniones blockquote, .opiniones_mia blockquote {
   line-height: 4rem;
   position: relative;
@@ -1141,6 +1156,19 @@ footer div img {
     margin-left: 1rem;
     float: right
   }
+
+  .opiniones_alumnos {
+    width: 30%;
+    border-radius: 15rem;
+    margin-left: 1rem;
+    background-color:  #ededed;
+    float: right
+  }
+
+.valoraciones_alumnos {
+    width: 45%;
+    margin-top: 3rem
+}
 
   .opiniones:hover, .opiniones_mia:hover {
     transition: all .4s ease-in-out;
