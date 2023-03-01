@@ -1167,7 +1167,8 @@ footer div img {
 
 .valoraciones_alumnos {
     width: 45%;
-    margin-top: 3rem
+    margin-top: 3rem;
+    margin-left: 4rem
 }
 
   .opiniones:hover, .opiniones_mia:hover {
